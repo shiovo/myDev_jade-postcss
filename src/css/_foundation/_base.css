@@ -10,13 +10,9 @@ body {
     font-family:  Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
     color: $color-text;
     line-height: 1.5;
-    letter-spacing:1.1px;
+    letter-spacing:$letter-default;
     color: $color-text;
     font-size: var(--font-m);
-}
-
-*{
-    box-sizing:border-box;
 }
 
 a {
@@ -30,54 +26,7 @@ a {
     }
 }
 
-small {
 
-}
-
-p {
-	margin: 0;
-}
-
-h1,h2,h3,h4 {
-	font-size: inherit;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    line-height: 1;
-}
-
-ul, li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-dl, dt, dd {
-	margin:0;
-	padding:0;
-}
-
-figure {
-	margin: 0;
-}
-
-img {
-	max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-table{
-	border-collapse: collapse;
-}
-
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    font-size: inherit;
-}
-
-th{
-    font-weight: normal;
-}
 
 
 @media (--media-max) {

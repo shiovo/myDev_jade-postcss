@@ -1,14 +1,12 @@
-// font
-
-
 // colore
 $color-text: #bebebe;
 $colo-key: #c3afd7;
 
+
 // letter spacing
-$letter-25: 0.1rem;
-$letter-50: 0.2rem;
-$letter-100: 0.4rem;
+// letter spacing
+$letter-default:0.2rem;
+$letter-large:0.5rem;
 
 
 // Width
