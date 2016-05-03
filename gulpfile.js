@@ -52,9 +52,20 @@ function compileCss() {
 gulp.task('css', function () {  //”css”タスクを登録
   return compileCss();
 });
-　
 
-//htmlタスク
+//image
+function compileImagemin() {
+  return gulp.src(['src/images/**/*.*'])
+    .pipe(imagemin({
+      progressive: true
+    }))
+    .pipe(gulp.dest('./tmp/images/'));
+}
+gulp.task('imagemin', function () {
+  return compileImagemin();
+})
+
+//build
 gulp.task('clean-dist', function () {
   return gulp.src('dist').pipe(clean());
 });
@@ -62,15 +73,6 @@ gulp.task('clean-dist', function () {
 gulp.task('clean-tmp', function () {
   return gulp.src('tmp').pipe(clean());
 });
-
-gulp.task('imagemin', function () {
-  return gulp.src(['src/images/**/*.*'])
-    .pipe(imagemin({
-      progressive: true
-    }))
-    .pipe(gulp.dest('dist/images'));
-});
-
 
 //ファイルの監視
 gulp.task('watch',function(cb){
@@ -81,8 +83,13 @@ gulp.task('watch',function(cb){
     'src/**/*.jade'
   ], compileJade)
   watch([
+    'src/images/**/*.*'
+  ], compileImagemin)
+  watch([
     'src/js/**/*.js', //jsファイルを監視
-    'tmp/**/*.html'
+    'src/font/**/*.*',
+    'tmp/**/*.html',
+    'tmp/images/**/*.*'
   ], function() {
     browserSync.reload();
   });
@@ -94,7 +101,7 @@ gulp.task('watch',function(cb){
 });
 
 gulp.task('default', function (cb) {
-  runSequence('clean-tmp', ['css', 'jade'], ['watch','browser-sync'], cb);
+  runSequence('clean-tmp', ['css', 'jade','imagemin'], ['watch','browser-sync'], cb);
 });
 
 // gulp.task('build', function (cb) {
