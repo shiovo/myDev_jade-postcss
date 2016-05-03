@@ -1,0 +1,27 @@
+doctype
+html(lang='ja')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport', content='width=device-width,user-scalable=yes,initial-scale=1.0')
+    block title
+    <meta name="description" content="">
+    <meta name="keywords" content=",,,,,,">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@accountID">
+    <meta name="twitter:creator" content="@accountID">
+
+    <meta property=”og:title” content=”記事のタイトル”>
+    <meta property=”og:type” content=”website”>
+    <meta property=”og:description” content=”記事の説明”>
+    <meta property=”og:url” content=”記事のURL”>
+    <meta property=”og:image” content=”画像のURL”>
+    <meta property=”og:site_name” content=”サイトのタイトル”>
+
+    link(rel='shortcut icon', href='/images/favicon.ico')
+    link(rel='stylesheet', href='/css/common.css')
+  body
+    include _header
+    block body
+    include _footer

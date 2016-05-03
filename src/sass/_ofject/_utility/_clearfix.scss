@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* clear
+----------------------------------------------------*/
+.u-clear{clear: both;}
+
+.u-clearfix {
+  zoom: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

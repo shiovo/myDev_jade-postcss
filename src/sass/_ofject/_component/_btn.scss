@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* btn
+----------------------------------------------------*/
+%c-btn{
+	padding: 10px 25px;
+	border-radius: 4rem;
+	display: inline-block;
+	text-align: center;
+	width:50%;
+	max-width:240px;
+}
+
+
+%c-btn-dark{
+	@extend %c-btn;
+	color: #fff;
+	background-color: #333;
+}
+
+.btnCont{
+	text-align:center;
+	margin-top:20%;
+}
+
+.btn-contact{
+	@extend %c-btn-dark;
+
+}
+
+@include media-max {
+.c-btn{
+
+}
+
+}
+
+/* SP */
+@include media-min {
+.c-btn-dark{
+	padding: 15px 0;
+	width: 165px;
+}
+
+}
+
+

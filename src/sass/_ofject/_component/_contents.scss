@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* contents
+----------------------------------------------------*/
+.c-contents{
+
+}
+
+
+
+@include media-max {
+.c-contents{
+	max-width: 1230px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+}
+
+/* SP */
+@include media-min {
+.c-contents{
+	padding: 0 20px;
+
+}
+
+}
+
+

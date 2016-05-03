@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* about
+----------------------------------------------------*/
+.about-list{
+  @include flexbox;
+
+  dd,dt{
+    padding:4%;
+  }
+
+  dt{
+    width:100px;
+    font-weight: $fontW-bold;
+  }
+
+  dd{
+    @include flex(1);
+    span{
+      color:$color-subtext;
+      display:inline-block;
+      margin-left:15px;
+    }
+  }
+}
+
+@include media-max {
+
+}
+
+/* SP */
+@include media-min {
+
+}
+
+

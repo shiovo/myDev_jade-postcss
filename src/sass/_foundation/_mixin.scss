@@ -1,0 +1,32 @@
+@charset "UTF-8";
+//リンク装飾リセット
+@mixin link-reset{
+	color: $color-text;
+	text-decoration: none;
+}
+
+//clearfix
+@mixin clearfix {
+  zoom: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// Media Queries
+@mixin media-max {
+  // 1280px以上
+  @media only screen and (min-width: 900px ) {
+    @content;
+  }
+}
+
+@mixin media-min {
+  // 980px以下
+  @media only screen and (max-width: 899px) {
+    @content;
+  }
+}

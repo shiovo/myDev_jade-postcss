@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* --------------------------------------------------------------
+base
+-------------------------------------------------------------- */
+html {
+	font-size: 62.5%;
+}
+
+
+body {
+    font-family: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;    color: $color-text;
+    line-height: 1.5;
+    letter-spacing:1.1px;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+a {
+    color: $color-text;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover{
+        opacity:0.6;
+        transition: all 0.3s;
+    }
+}
+
+small {
+
+}
+
+p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+h1,h2,h3,h4 {
+	font-size: inherit;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+dl, dt, dd {
+	margin:0;
+	padding:0;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    font-size: inherit;
+}
+
+select{
+    padding: 2px 5px;
+
+}
+
+th{
+    font-weight: normal;
+}
+
+
+
+
+/* PC */
+@include media-max {
+    body{
+        font-size: 1.3em;
+    }
+
+
+}
+
+/* SP */
+@include media-min {
+
+body{
+    font-size: 1.3em;
+}
+
+}
+
