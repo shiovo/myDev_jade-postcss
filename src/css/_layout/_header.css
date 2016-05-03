@@ -1,3 +1,12 @@
 @charset "UTF-8";
 /* header
 ----------------------------------------------------*/
+.header-logo{
+  img{
+    width:170px;
+  }
+}
+
+.header-text{
+  font-family: $font-en;
+}

@@ -6,7 +6,7 @@
 
 
 
-@include media-max {
+@media (--media-max) {
 .c-contents{
 	max-width: 1230px;
 	padding: 0 30px;
@@ -16,12 +16,10 @@
 }
 
 /* SP */
-@include media-min {
+@media (--media-min) {
 .c-contents{
 	padding: 0 20px;
 
 }
 
 }
-
-

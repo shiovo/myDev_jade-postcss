@@ -248,7 +248,7 @@ svg {
 	box-sizing: border-box;
 	color: #000000;
 	cursor: default;
-	font: 100%/1.5 sans-serif;
+	// font: 100%/1.5 sans-serif;
 }
 
 /* specify the text decoration of anchors */

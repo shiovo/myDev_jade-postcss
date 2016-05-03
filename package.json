@@ -26,7 +26,6 @@
     "postcss-cssnext": "^2.5.2",
     "postcss-easy-import": "^1.0.1",
     "postcss-inline-comment": "^2.0.0",
-    "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-sassy-mixins": "^2.0.0",
     "postcss-simple-vars": "^1.2.0",
