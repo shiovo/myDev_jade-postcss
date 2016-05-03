@@ -8,7 +8,7 @@ var plumber = require('gulp-plumber');
 var notify  = require('gulp-notify');
 var jade = require('jade');
 var gulpJade = require('gulp-jade');
-var css = require('gulp-postcss');
+require('postcss-comment/hookRequire');
 var postcss = require('gulp-postcss');
 var watch = require('gulp-watch');
 
@@ -39,17 +39,17 @@ gulp.task('jade', function () {
 
 //css
 function compileCss() {
-  return gulp.src(['./src/**/*.css', '!src/**/_*.css'], {base:'src'})         //src下にある.cssファイルを指定
+  return gulp.src(['./src/**/*.css', '!src/**/_*.css'], {base:'src'})  //src下にある.cssファイルを指定
     .pipe(postcss([
       require('postcss-easy-import')({glob:true,prefix:'_'}),
       require('postcss-cssnext')(),
-      require('postcss-mixins')(),
+      require('postcss-sassy-mixins')(),
       require('postcss-nested')(),
-      require('postcss-simple-vars')()
-    ]))              //PostCSSにファイルを処理してもらう
-    .pipe(gulp.dest('./tmp'));          //生成されたCSSをdist下に配置
+      require('postcss-simple-vars')(),
+    ]))  //PostCSSにファイルを処理してもらう
+    .pipe(gulp.dest('./tmp'));  //生成されたCSSをdist下に配置
 }
-gulp.task('css', function () {           //”css”タスクを登録
+gulp.task('css', function () {  //”css”タスクを登録
   return compileCss();
 });
 　

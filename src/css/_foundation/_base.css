@@ -1,16 +1,17 @@
-@charset "UTF-8";
 /* --------------------------------------------------------------
 base
 -------------------------------------------------------------- */
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 
 body {
-    font-family: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;    color: $color-text;
+    font-family:  Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;    color: $color-text;
     line-height: 1.5;
+    font-size: 1.4em;
     letter-spacing:1.1px;
+    color: $color-text;
 }
 
 *{
@@ -23,7 +24,7 @@ a {
     cursor: pointer;
 
     &:hover{
-        opacity:0.6;
+        opacity:0.7;
         transition: all 0.3s;
     }
 }
@@ -34,7 +35,6 @@ small {
 
 p {
 	margin: 0;
-	line-height: 1.6;
 }
 
 h1,h2,h3,h4 {
@@ -74,33 +74,21 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     font-size: inherit;
 }
 
-select{
-    padding: 2px 5px;
-
-}
-
 th{
     font-weight: normal;
 }
 
 
-
-
 /* PC */
 @include media-max {
     body{
-        font-size: 1.3em;
+        font-size:1.6rem;
     }
-
-
 }
 
 /* SP */
 @include media-min {
 
-body{
-    font-size: 1.3em;
-}
 
 }
 
