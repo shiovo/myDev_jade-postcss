@@ -100,11 +100,22 @@ gulp.task('watch',function(cb){
   });
 });
 
+//copy
+gulp.task('copy-all', function () {
+  gulp.src([
+    'src/**/*.*',
+    'tmp/**/*.*',
+    '!src/css/**/*.*',
+    '!src/jade/**/*.*',
+    '!src/images/**/*.*'
+  ]).pipe(gulp.dest('dist/'));
+});
+
 gulp.task('default', function (cb) {
   runSequence('clean-tmp', ['css', 'jade','imagemin'], ['watch','browser-sync'], cb);
 });
 
-// gulp.task('build', function (cb) {
-//   runSequence('clean-dist', 'sass', 'jade', ['copy-all', 'imagemin'], cb);
-// });
+gulp.task('build', function (cb) {
+  runSequence('clean-dist', ['css', 'jade','imagemin'], ['copy-all'], cb);
+});
 

@@ -1,9 +1,8 @@
 // colore
-$color-text: #bebebe;
+$color-text: #333;
 $colo-key: #c3afd7;
 
 
-// letter spacing
 // letter spacing
 $letter-default:0.3rem;
 $letter-large:0.5rem;
@@ -15,8 +14,8 @@ $width-min: 799px;
 
 
 // font
-$font-en: 'Forum', cursive;
-$font-ja:  Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-en: Arial;
+$font-ja: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 //margin
 $margin-40:6.0%;
@@ -28,17 +27,32 @@ $margin-90: 8.8%;
 @custom-media --media-max (width >= 900px);
 @custom-media --media-min (width < 900px);
 
+
 //font
+:root {
+  --font-s: 1.2rem;
+  --font-m: 1.3rem;
+  --font-mm: 1.8rem;
+  --font-l: 2.4rem;
+  --font-ll: 2.8rem;
+}
+
 @media (--media-max) {
-  :root { --font-s: 1.2rem; }
-  :root { --font-m: 1.3rem; }
-  :root { --font-l: 2.4rem; }
-  :root { --font-ll: 2.8rem; }
+  :root {
+    --font-s: 1.2rem;
+    --font-m: 1.3rem;
+    --font-mm: 1.8rem;
+    --font-l: 2.4rem;
+    --font-ll: 2.8rem;
+  }
 }
 
 @media (--media-min) {
-  :root { --font-s: 1.2rem; }
-  :root { --font-m: 1.4rem; }
-  :root { --font-l: 2.4rem; }
-  :root { --font-ll: 2.8rem; }
+  :root {
+    --font-s: 1.2rem;
+    --font-m: 1.3rem;
+    --font-mm: 1.8rem;
+    --font-l: 2.4rem;
+    --font-ll: 2.8rem;
+  }
 }
